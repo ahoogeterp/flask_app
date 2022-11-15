@@ -76,13 +76,13 @@ def upload_files():
                         image = Image.open(app.config['IMAGE_PATH']+image_name)
                         image.resize((imsz, imsx)).save(app.config['IMAGE_PATH']+image_name, "png")
                         count1 += 1 
-            pathlib.Path(app.config['UPLOAD_PATH']+filename).rename(app.config['ARCHIVE']+filename+dt_string )
+            pathlib.Path(app.config['UPLOAD_PATH']+filename).rename(app.config['ARCHIVE']+dt_string+filename )
         
         elif filename.endswith(".jpg") or filename.endswith(".jpeg") or filename.endswith(".png"):
-            pathlib.Path(app.config['UPLOAD_PATH']+filename).rename(app.config['IMAGE_PATH']+filename)
+            pathlib.Path(app.config['UPLOAD_PATH']+filename).rename(app.config['IMAGE_PATH']+dt_string+filename)
 
         else:
-            pathlib.Path(app.config['UPLOAD_PATH']+filename).rename(app.config['ARCHIVE']+filename+dt_string)
+            pathlib.Path(app.config['UPLOAD_PATH']+filename).rename(app.config['ARCHIVE']+dt_string+filename)
 
     return '', 204
 
