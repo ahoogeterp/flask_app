@@ -1,15 +1,16 @@
 <html>
-    <head>
-        <title>Home</title>
-        <div class="basic">
-            {%include "nav_bar.html"%}
-        </div>
-        <div style="padding-left:16px">
-        <h1>enter a heading here </h1>
-        <h2>or here </h2>
-        <p></p>
-        </div>
+{%include "nav_bar.html"%}
+{% block content %}
 
-    </head>
-</html>
-<!-- <html><head> <title>Symrise Safety Board</title></head><body><h1>Symrise Safety Board Updates</h1><img src='/safety' style='width: 90%; height: 90%;'/>" \"</body></html> -->
+<body>
+    <div>
+        <h1>Testing Page</h1>
+        <h2>Where to enter text</h2>
+        <!-- <input type="text" size="100"> -->
+        <textarea name="paragraph_text" cols="100" rows="25"></textarea>
+    </div>
+
+</body>
+{% endblock %}
+
+</html
